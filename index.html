@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Undangan Pernikahan | Andi & Siti</title>
+
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: #f4f6f1;
+      color: #344238;
+      line-height: 1.7;
+    }
+
+    section {
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+
+    /* =========================
+       COVER
+    ========================= */
+
+    .cover {
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      position: relative;
+
+      background:
+        linear-gradient(
+          rgba(40, 60, 48, 0.55),
+          rgba(40, 60, 48, 0.65)
+        ),
+        url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1200&q=80")
+        center/cover;
+
+      color: white;
+    }
+
+    .cover-content {
+      max-width: 650px;
+      padding: 30px;
+    }
+
+    .cover p:first-child {
+      letter-spacing: 5px;
+      font-size: 14px;
+      color: #e7d5a5;
+    }
+
+    .cover h1 {
+      font-size: 58px;
+      font-weight: normal;
+      margin: 15px 0;
+      color: white;
+    }
+
+    .cover p {
+      font-size: 18px;
+    }
+
+    .date {
+      font-size: 22px;
+      margin: 20px 0;
+      color: #e7d5a5;
+    }
+
+
+    /* =========================
+       BUTTON
+    ========================= */
+
+    .btn {
+      display: inline-block;
+
+      margin-top: 25px;
+      padding: 12px 28px;
+
+      border-radius: 30px;
+
+      background: #b89b5e;
+      color: white;
+
+      text-decoration: none;
+
+      border: none;
+
+      cursor: pointer;
+
+      font-size: 16px;
+
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #927b48;
+      transform: translateY(-2px);
+    }
+
+
+    /* =========================
+       GENERAL
+    ========================= */
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .title {
+      font-size: 36px;
+      font-weight: normal;
+
+      margin-bottom: 20px;
+
+      color: #526b5a;
+    }
+
+    .subtitle {
+      max-width: 650px;
+      margin: auto;
+
+      color: #68766c;
+    }
+
+
+    /* =========================
+       PEMBUKA
+    ========================= */
+
+    .opening {
+      background: #ffffff;
+    }
+
+    .opening .arabic {
+      font-size: 25px;
+      margin-bottom: 20px;
+      color: #526b5a;
+    }
+
+
+    /* =========================
+       MEMPELAI
+    ========================= */
+
+    .couple {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      gap: 50px;
+
+      margin-top: 40px;
+
+      flex-wrap: wrap;
+    }
+
+    .person {
+      width: 280px;
+    }
+
+    .person img {
+      width: 180px;
+      height: 180px;
+
+      object-fit: cover;
+
+      border-radius: 50%;
+
+      border: 6px solid white;
+
+      box-shadow:
+        0 5px 20px rgba(50, 70, 55, 0.18);
+    }
+
+    .person h3 {
+      margin-top: 15px;
+
+      font-size: 27px;
+
+      color: #526b5a;
+    }
+
+    .person p {
+      color: #68766c;
+    }
+
+    .and {
+      font-size: 35px;
+      color: #b89b5e;
+    }
+
+
+    /* =========================
+       COUNTDOWN
+    ========================= */
+
+    .countdown-section {
+      background: #e9eee7;
+    }
+
+    .countdown {
+      display: flex;
+
+      justify-content: center;
+
+      gap: 15px;
+
+      flex-wrap: wrap;
+
+      margin-top: 30px;
+    }
+
+    .time-box {
+      width: 90px;
+
+      padding: 15px 5px;
+
+      background: #526b5a;
+
+      color: white;
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 5px 15px rgba(50, 70, 55, 0.15);
+    }
+
+    .time-box span {
+      display: block;
+
+      font-size: 28px;
+
+      font-weight: bold;
+    }
+
+    .time-box small {
+      font-size: 12px;
+
+      color: #e7d5a5;
+    }
+
+
+    /* =========================
+       ACARA
+    ========================= */
+
+    .event-box {
+      max-width: 700px;
+
+      margin: 35px auto 0;
+
+      padding: 35px 25px;
+
+      background: white;
+
+      border-radius: 20px;
+
+      box-shadow:
+        0 5px 25px rgba(50, 70, 55, 0.10);
+    }
+
+    .event-item {
+      margin: 20px 0;
+    }
+
+    .event-item h3 {
+      color: #526b5a;
+
+      font-size: 25px;
+
+      margin-bottom: 10px;
+    }
+
+    .event-item p {
+      color: #68766c;
+    }
+
+    .event-box hr {
+      border: none;
+
+      border-top: 1px solid #dfe5df;
+    }
+
+
+    /* =========================
+       GALERI
+    ========================= */
+
+    .gallery-section {
+      background: #e9eee7;
+    }
+
+    .gallery {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 12px;
+
+      margin-top: 35px;
+    }
+
+    .gallery img {
+      width: 100%;
+
+      height: 220px;
+
+      object-fit: cover;
+
+      border-radius: 12px;
+
+      transition: 0.3s;
+
+      box-shadow:
+        0 3px 10px rgba(50, 70, 55, 0.10);
+    }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+
+      box-shadow:
+        0 8px 20px rgba(50, 70, 55, 0.20);
+    }
+
+
+    /* =========================
+       RSVP
+    ========================= */
+
+    .rsvp-form {
+      max-width: 500px;
+
+      margin: 30px auto 0;
+
+      text-align: left;
+    }
+
+    .rsvp-form label {
+      display: block;
+
+      margin-top: 10px;
+
+      color: #526b5a;
+
+      font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+
+      padding: 13px;
+
+      margin: 8px 0 15px;
+
+      border: 1px solid #ccd5cc;
+
+      border-radius: 8px;
+
+      background: #fff;
+
+      color: #344238;
+
+      font-family: inherit;
+
+      font-size: 15px;
+
+      outline: none;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: #809886;
+
+      box-shadow:
+        0 0 0 3px rgba(128, 152, 134, 0.15);
+    }
+
+    textarea {
+      min-height: 100px;
+
+      resize: vertical;
+    }
+
+    .rsvp-form .btn {
+      width: 100%;
+    }
+
+
+    /* =========================
+       PENUTUP
+    ========================= */
+
+    .closing {
+      background: #e9eee7;
+    }
+
+    .closing h2 {
+      color: #526b5a;
+      font-size: 32px;
+      margin-top: 20px;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      padding: 40px 20px;
+
+      text-align: center;
+
+      background: #34483a;
+
+      color: white;
+    }
+
+    footer p:last-child {
+      color: #d8c58e;
+
+      margin-top: 5px;
+    }
+
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 700px) {
+
+      .cover h1 {
+        font-size: 40px;
+      }
+
+      .cover p {
+        font-size: 16px;
+      }
+
+      .couple {
+        gap: 20px;
+      }
+
+      .and {
+        display: none;
+      }
+
+      .title {
+        font-size: 30px;
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery img {
+        height: 160px;
+      }
+
+      .time-box {
+        width: 75px;
+      }
+
+      .time-box span {
+        font-size: 23px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- =================================
+       COVER
+  ================================== -->
+
+  <section class="cover">
+
+    <div class="cover-content">
+
+      <p>THE WEDDING OF</p>
+
+      <h1>Andi & Siti</h1>
+
+      <div class="date">
+        Minggu, 20 Desember 2026
+      </div>
+
+      <p>
+        Dengan penuh kebahagiaan, kami mengundang
+        Bapak/Ibu/Saudara/i untuk hadir di acara
+        pernikahan kami.
+      </p>
+
+      <a href="#undangan" class="btn">
+        💌 Buka Undangan
+      </a>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       PEMBUKA
+  ================================== -->
+
+  <section id="undangan" class="opening">
+
+    <div class="container">
+
+      <p class="arabic">
+        بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ
+      </p>
+
+      <h2 class="title">
+        Assalamu'alaikum Warahmatullahi Wabarakatuh
+      </h2>
+
+      <p class="subtitle">
+
+        Maha Suci Allah yang telah menciptakan makhluk-Nya
+        berpasang-pasangan. Dengan memohon rahmat dan
+        ridho Allah SWT, kami bermaksud menyelenggarakan
+        acara pernikahan kami.
+
+      </p>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       MEMPELAI
+  ================================== -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="title">
+        Mempelai
+      </h2>
+
+      <p class="subtitle">
+        Dengan penuh rasa syukur dan kebahagiaan,
+        kami mempersembahkan dua insan yang akan
+        memulai perjalanan hidup bersama.
+      </p>
+
+
+      <div class="couple">
+
+
+        <!-- MEMPELAI PRIA -->
+
+        <div class="person">
+
+          <img
+            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80"
+            alt="Mempelai Pria"
+          >
+
+          <h3>
+            Andi Pratama
+          </h3>
+
+          <p>
+            Putra pertama dari
+            <br>
+            Bapak Ahmad & Ibu Sari
+          </p>
+
+        </div>
+
+
+        <div class="and">
+          &
+        </div>
+
+
+        <!-- MEMPELAI WANITA -->
+
+        <div class="person">
+
+          <img
+            src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=500&q=80"
+            alt="Mempelai Wanita"
+          >
+
+          <h3>
+            Siti Aisyah
+          </h3>
+
+          <p>
+            Putri kedua dari
+            <br>
+            Bapak Budi & Ibu Lina
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       COUNTDOWN
+  ================================== -->
+
+  <section class="countdown-section">
+
+    <div class="container">
+
+      <h2 class="title">
+        Menuju Hari Bahagia
+      </h2>
+
+      <p class="subtitle">
+        Hitung mundur menuju hari pernikahan kami.
+      </p>
+
+
+      <div class="countdown">
+
+
+        <div class="time-box">
+
+          <span id="days">
+            0
+          </span>
+
+          <small>
+            Hari
+          </small>
+
+        </div>
+
+
+        <div class="time-box">
+
+          <span id="hours">
+            0
+          </span>
+
+          <small>
+            Jam
+          </small>
+
+        </div>
+
+
+        <div class="time-box">
+
+          <span id="minutes">
+            0
+          </span>
+
+          <small>
+            Menit
+          </small>
+
+        </div>
+
+
+        <div class="time-box">
+
+          <span id="seconds">
+            0
+          </span>
+
+          <small>
+            Detik
+          </small>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       DETAIL ACARA
+  ================================== -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="title">
+        Detail Acara
+      </h2>
+
+
+      <div class="event-box">
+
+
+        <!-- AKAD -->
+
+        <div class="event-item">
+
+          <h3>
+            💍 Akad Nikah
+          </h3>
+
+          <p>
+            Minggu, 20 Desember 2026
+          </p>
+
+          <p>
+            08.00 - 10.00 WIB
+          </p>
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- RESEPSI -->
+
+        <div class="event-item">
+
+          <h3>
+            🥂 Resepsi
+          </h3>
+
+          <p>
+            Minggu, 20 Desember 2026
+          </p>
+
+          <p>
+            11.00 - 14.00 WIB
+          </p>
+
+        </div>
+
+
+        <hr>
+
+
+        <!-- LOKASI -->
+
+        <div class="event-item">
+
+          <h3>
+            📍 Gedung Pernikahan Bahagia
+          </h3>
+
+          <p>
+            Jl. Kebahagiaan No. 123,
+            Jakarta, Indonesia
+          </p>
+
+
+          <a
+            href="https://maps.google.com"
+            target="_blank"
+            class="btn"
+          >
+            Lihat Lokasi
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       GALERI
+  ================================== -->
+
+  <section class="gallery-section">
+
+    <div class="container">
+
+      <h2 class="title">
+        Galeri Kami
+      </h2>
+
+      <p class="subtitle">
+        Beberapa momen indah dalam perjalanan
+        kisah cinta kami.
+      </p>
+
+
+      <div class="gallery">
+
+
+        <img
+          src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=700&q=80"
+          alt="Foto Pernikahan 1"
+        >
+
+
+        <img
+          src="https://images.unsplash.com/photo-1606800052052-a08af7148866?auto=format&fit=crop&w=700&q=80"
+          alt="Foto Pernikahan 2"
+        >
+
+
+        <img
+          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=700&q=80"
+          alt="Foto Pernikahan 3"
+        >
+
+
+        <img
+          src="https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=700&q=80"
+          alt="Foto Pernikahan 4"
+        >
+
+
+        <img
+          src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=700&q=80"
+          alt="Foto Pernikahan 5"
+        >
+
+
+        <img
+          src="https://images.unsplash.com/photo-1544078751-58fee2d8a03b?auto=format&fit=crop&w=700&q=80"
+          alt="Foto Pernikahan 6"
+        >
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       RSVP
+  ================================== -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="title">
+        Konfirmasi Kehadiran
+      </h2>
+
+      <p class="subtitle">
+
+        Silakan isi formulir berikut untuk
+        mengonfirmasi kehadiran dan memberikan
+        ucapan kepada kedua mempelai.
+
+      </p>
+
+
+      <form
+        id="rsvpForm"
+        class="rsvp-form"
+      >
+
+
+        <label>
+          Nama
+        </label>
+
+        <input
+          type="text"
+          id="nama"
+          placeholder="Masukkan nama Anda"
+          required
+        >
+
+
+        <label>
+          Kehadiran
+        </label>
+
+        <select
+          id="kehadiran"
+          required
+        >
+
+          <option value="">
+            Pilih kehadiran
+          </option>
+
+          <option value="Hadir">
+            Saya akan hadir
+          </option>
+
+          <option value="Tidak Hadir">
+            Saya tidak dapat hadir
+          </option>
+
+        </select>
+
+
+        <label>
+          Ucapan
+        </label>
+
+        <textarea
+          id="ucapan"
+          placeholder="Tulis ucapan untuk kedua mempelai..."
+        ></textarea>
+
+
+        <button
+          type="submit"
+          class="btn"
+        >
+          💌 Kirim Konfirmasi
+        </button>
+
+
+      </form>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       PENUTUP
+  ================================== -->
+
+  <section class="closing">
+
+    <div class="container">
+
+      <h2 class="title">
+        Terima Kasih
+      </h2>
+
+
+      <p class="subtitle">
+
+        Merupakan suatu kehormatan dan kebahagiaan
+        bagi kami apabila Bapak/Ibu/Saudara/i
+        berkenan hadir dan memberikan doa restu.
+
+      </p>
+
+
+      <h2>
+        Andi & Siti
+      </h2>
+
+    </div>
+
+  </section>
+
+
+
+  <!-- =================================
+       FOOTER
+  ================================== -->
+
+  <footer>
+
+    <p>
+      © 2026 Andi & Siti
+    </p>
+
+    <p>
+      Made with ❤️
+    </p>
+
+  </footer>
+
+
+
+  <!-- =================================
+       JAVASCRIPT
+  ================================== -->
+
+  <script>
+
+
+    // =================================
+    // COUNTDOWN
+    // =================================
+
+    const targetDate =
+      new Date(
+        "December 20, 2026 08:00:00"
+      ).getTime();
+
+
+    function updateCountdown() {
+
+      const now =
+        new Date().getTime();
+
+
+      const distance =
+        targetDate - now;
+
+
+      if (distance <= 0) {
+
+        document.getElementById("days")
+          .innerText = "0";
+
+        document.getElementById("hours")
+          .innerText = "0";
+
+        document.getElementById("minutes")
+          .innerText = "0";
+
+        document.getElementById("seconds")
+          .innerText = "0";
+
+        return;
+      }
+
+
+      const days =
+        Math.floor(
+          distance /
+          (1000 * 60 * 60 * 24)
+        );
+
+
+      const hours =
+        Math.floor(
+          (distance %
+          (1000 * 60 * 60 * 24))
+          /
+          (1000 * 60 * 60)
+        );
+
+
+      const minutes =
+        Math.floor(
+          (distance %
+          (1000 * 60 * 60))
+          /
+          (1000 * 60)
+        );
+
+
+      const seconds =
+        Math.floor(
+          (distance %
+          (1000 * 60))
+          /
+          1000
+        );
+
+
+      document.getElementById("days")
+        .innerText = days;
+
+
+      document.getElementById("hours")
+        .innerText = hours;
+
+
+      document.getElementById("minutes")
+        .innerText = minutes;
+
+
+      document.getElementById("seconds")
+        .innerText = seconds;
+
+    }
+
+
+    updateCountdown();
+
+    setInterval(
+      updateCountdown,
+      1000
+    );
+
+
+
+    // =================================
+    // RSVP WHATSAPP
+    // =================================
+
+    document
+      .getElementById("rsvpForm")
+      .addEventListener(
+        "submit",
+        function(event) {
+
+
+          event.preventDefault();
+
+
+          const nama =
+            document.getElementById(
+              "nama"
+            ).value;
+
+
+          const kehadiran =
+            document.getElementById(
+              "kehadiran"
+            ).value;
+
+
+          const ucapan =
+            document.getElementById(
+              "ucapan"
+            ).value;
+
+
+          /*
+           * GANTI NOMOR INI
+           * dengan nomor WhatsApp
+           * tujuan.
+           *
+           * Contoh:
+           * 6281234567890
+           */
+
+          const nomorWhatsApp =
+            "6281234567890";
+
+
+          const pesan =
+            `Assalamu'alaikum.
+
+Nama: ${nama}
+
+Konfirmasi Kehadiran:
+${kehadiran}
+
+Ucapan:
+${ucapan}
+
+Terima kasih.`;
+
+
+          const url =
+            "https://wa.me/" +
+            nomorWhatsApp +
+            "?text=" +
+            encodeURIComponent(
+              pesan
+            );
+
+
+          window.open(
+            url,
+            "_blank"
+          );
+
+
+        }
+      );
+
+  </script>
+
+
+</body>
+
+</html>
